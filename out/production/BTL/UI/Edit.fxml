@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="346.0" prefWidth="658.0" style="-fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 0.0, 10.0);" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EditProduct">
+    <children>
+        <Text layoutX="348.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lưu ý:">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="45.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HSD:">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="50.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên:">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="41.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nhóm:">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="52.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã:">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="42.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chức năng:" wrappingWidth="50.724002838134766">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="336.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số lượng:">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="320.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PriceImport :">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="333.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giá bán:">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Text>
+        <Button fx:id="agree" layoutX="551.0" layoutY="290.0" mnemonicParsing="false" onAction="#ActionAgree" style="-fx-background-color: #3080EA; -fx-background-radius: 10; -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.15), 10.0, 0.0, 5.0, 10.0);" text="Xong" textFill="WHITE">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="15.0" />
+            </font>
+        </Button>
+        <TextField fx:id="nameProduct" layoutX="98.0" layoutY="60.0" prefHeight="31.0" prefWidth="200.0" promptText="Tên sản phẩm" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #3a7cbf;">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="groupProduct" layoutX="98.0" layoutY="103.0" prefHeight="31.0" prefWidth="200.0" promptText="Nhóm sản phẩm" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #3a7cbf;">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </TextField>
+        <TextArea fx:id="functionProduct" layoutX="106.0" layoutY="150.0" prefHeight="59.0" prefWidth="190.0" promptText="Chức năng" style="-fx-border-width: 0px 0px 1px 0px; -fx-border-color: #3a7cbf; -fx-background-color: rgb(244,244,244);">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </TextArea>
+        <TextField fx:id="priceSellProduct" layoutX="413.0" layoutY="57.0" prefHeight="31.0" prefWidth="190.0" promptText="Giá bán" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #3a7cbf;">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="priceImportProduct" layoutX="424.0" layoutY="101.0" prefHeight="31.0" prefWidth="180.0" promptText="Giá nhập" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #3a7cbf;">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="16.0" />
+            </font>
+        </TextField>
+        <TextArea fx:id="noteProduct" layoutX="399.0" layoutY="147.0" prefHeight="59.0" prefWidth="206.0" promptText="Lưu ý" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #3a7cbf;">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </TextArea>
+        <TextField fx:id="expiryProduct" layoutX="104.0" layoutY="222.0" prefHeight="31.0" prefWidth="194.0" promptText="năm/tháng/ngày" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #3a7cbf;">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </TextField>
+        <Text layoutX="346.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ảnh:">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Text>
+        <TextField fx:id="imageProduct" layoutX="407.0" layoutY="220.0" promptText="Đường dẫn file ảnh" style="-fx-background-color: rgba(0,0,0,0); -fx-border-width: 0px 0px 1px 0px; -fx-border-color: #3a7cbf;" styleClass="click-button" stylesheets="@designImport.css">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </TextField>
+        <Button layoutX="424.0" layoutY="288.0" mnemonicParsing="false" onAction="#ActionCancel" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: #ffffff; -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 5.0, 10.0);" styleClass="click-button" stylesheets="@designImport.css" text="Hủy" textFill="#3080ea">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="15.0" />
+            </font>
+        </Button>
+        <Text fx:id="idProduct" fill="#433e3e" layoutX="90.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã sản phẩm" wrappingWidth="194.0">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Text>
+        <Text fx:id="amountProduct" fill="#433e3e" layoutX="411.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200" wrappingWidth="194.0">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+.search {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 100;
+}
+
+.search-box {
+    -fx-background-color: transparent;
+    -fx-border-color: darkcyan;
+    -fx-border-width: 0px 1px 2px 0px;
+}
+
+.box {
+    -fx-background-color: transparent;
+    -fx-border-color: darkcyan;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+
+.search-button {
+    -fx-background-color: mediumturquoise;
+    -fx-background-radius: 30;
+}
+
+.searched {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20;
+}
+
+.border {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+}
+
+.right-bar {
+    -fx-background-color: lavender;
+}
+
+.shadow {
+    -fx-effect: dropshadow(three-pass-box,rgba(0, 0, 0, 0.1) , 10, 0, 0, 10);
+}

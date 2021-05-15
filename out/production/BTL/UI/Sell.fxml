@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Sells">
+    <left>
+        <VBox prefHeight="285.0" prefWidth="292.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER" prefHeight="34.0" prefWidth="250.0">
+                    <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                              <Label layoutX="51.0" layoutY="11.0" text="SẢN PHẨM" textFill="#cf3434">
+                                  <font>
+                                      <Font name="Times New Roman Bold Italic" size="19.0" />
+                                  </font>
+                              </Label>
+                     </children>
+                  </AnchorPane>
+                  <Button mnemonicParsing="false" onAction="#backHome" style="-fx-background-color: transparent;" styleClass="click-button" stylesheets="@designImport.css" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/arrow_left_red.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="46.0" prefWidth="250.0" stylesheets="@style.css">
+                    <children>
+                        <TextField fx:id="search" onAction="#ActionSearch" onKeyPressed="#ActionEditAmountKey" onKeyReleased="#ActionSearch" prefHeight="26.0" prefWidth="121.0" promptText="Tìm kiếm" styleClass="search-box" stylesheets="@style.css">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <font>
+                                <Font name="Times New Roman Bold Italic" size="13.0" />
+                            </font></TextField>
+                        <TextField fx:id="getAmount" onKeyPressed="#ActionAddAmount" onMouseClicked="#ActionEditAmountClick" prefHeight="26.0" prefWidth="73.0" promptText="Số lượng" styleClass="box" stylesheets="@style.css">
+                            <font>
+                                <Font name="Times New Roman Bold Italic" size="13.0" />
+                            </font>
+                        </TextField>
+                    </children>
+                    <padding>
+                        <Insets left="10.0" right="10.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                    <styleClass>
+                        <String fx:value="search" />
+                        <String fx:value="shadow" />
+                    </styleClass>
+                </HBox>
+                <VBox alignment="CENTER" prefHeight="262.0" prefWidth="232.0" stylesheets="@style.css">
+                    <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="15.0" />
+                    </VBox.margin>
+                    <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="border" />
+                    </styleClass>
+                    <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label prefWidth="85.0" text="Tên" />
+                                <Label fx:id="pro_name" prefWidth="125.0" styleClass="box" stylesheets="@style.css" />
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label prefWidth="85.0" text="Nhóm" />
+                                <Label fx:id="pro_group" prefWidth="125.0" styleClass="box" stylesheets="@style.css" />
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="212.0">
+                            <children>
+                                <Label prefWidth="85.0" text="Chức năng" />
+                        <TextArea fx:id="pro_function" editable="false" prefHeight="18.0" prefWidth="128.0" styleClass="box" stylesheets="@style.css" />
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label prefWidth="85.0" text="Số lượng" />
+                                <Label fx:id="pro_amount" prefHeight="27.0" prefWidth="125.0" styleClass="box" stylesheets="@style.css" />
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label prefWidth="85.0" text="Giá bán" />
+                                <Label fx:id="pro_price_sell" prefWidth="125.0" styleClass="box" stylesheets="@style.css" />
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label prefWidth="85.0" text="Hạn sử dụng" />
+                                <Label fx:id="pro_expity" prefWidth="125.0" styleClass="box" stylesheets="@style.css" />
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label prefWidth="85.0" text="Lưu ý" />
+                                <Label fx:id="pro_note" prefWidth="125.0" styleClass="box" stylesheets="@style.css" />
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0" right="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="26.0" prefWidth="270.0">
+                    <children>
+                        <Button fx:id="add" mnemonicParsing="false" onMouseClicked="#ActionAdd" prefHeight="26.0" prefWidth="50.0" text="Thêm">
+                            <font>
+                                <Font name="Times New Roman Bold Italic" size="13.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="border" />
+                                <String fx:value="shadow" />
+                        <String fx:value="click-button" />
+                            </styleClass>
+                            <textFill>
+                                <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                                <Color red="0.19736842811107635" green="0.028326023370027542" blue="0.028326023370027542" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                                <Color red="0.5" green="0.08796296268701553" blue="0.08796296268701553" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </RadialGradient>
+                            </textFill>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                     <stylesheets>
+                        <URL value="@style.css" />
+                        <URL value="@designImport.css" />
+                     </stylesheets>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+    <bottom>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <VBox layoutX="368.0" prefHeight="148.0" prefWidth="255.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="368.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                            <children>
+                                <Label styleClass="shadow" stylesheets="@style.css" text="Tổng tiền" textFill="#cd4242">
+                                    <font>
+                                        <Font name="Times New Roman Bold Italic" size="19.0" />
+                                    </font></Label>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="44.0" prefWidth="230.0" stylesheets="@style.css">
+                            <children>
+                                <Label fx:id="total" prefHeight="30.0" prefWidth="130.0" styleClass="box" stylesheets="@style.css" />
+                                <Label styleClass="shadow" stylesheets="@style.css" text="VNĐ">
+                                    <font>
+                                        <Font name="Times New Roman Bold Italic" size="15.0" />
+                                    </font></Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="20.0" right="20.0" />
+                            </VBox.margin>
+                            <styleClass>
+                                <String fx:value="search" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                        </HBox>
+                        <HBox prefHeight="66.0" prefWidth="245.0">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <children>
+                                <Button fx:id="delete" mnemonicParsing="false" onAction="#ActionDelete" prefHeight="26.0" prefWidth="53.0" text="Xóa">
+                                    <HBox.margin>
+                                        <Insets top="40.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="Times New Roman Bold Italic" size="14.0" />
+                                    </font>
+                                    <styleClass>
+                                        <String fx:value="border" />
+                                        <String fx:value="shadow" />
+                              <String fx:value="click-button" />
+                                    </styleClass>
+                                    <textFill>
+                                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                            <stops>
+                                                <Stop>
+                                                    <color>
+                                                        <Color red="0.19736842811107635" green="0.028326023370027542" blue="0.028326023370027542" />
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="0.5101351351351351">
+                                                    <color>
+                                                        <Color red="0.5263158082962036" green="0.07553606480360031" blue="0.07553606480360031" />
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                    <color>
+                                                        <Color red="0.5" green="0.08796296268701553" blue="0.08796296268701553" />
+                                                    </color>
+                                                </Stop>
+                                            </stops>
+                                        </RadialGradient>
+                                    </textFill>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                           <stylesheets>
+                              <URL value="@style.css" />
+                              <URL value="@designImport.css" />
+                           </stylesheets>
+                                </Button>
+                                <Button fx:id="pay" mnemonicParsing="false" onAction="#ActionPay" prefHeight="26.0" prefWidth="106.0" text="Thanh toán">
+                                    <HBox.margin>
+                                        <Insets left="100.0" top="40.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="Times New Roman Bold Italic" size="14.0" />
+                                    </font>
+                                    <styleClass>
+                                        <String fx:value="border" />
+                                        <String fx:value="shadow" />
+                              <String fx:value="click-button" />
+                                    </styleClass>
+                                    <textFill>
+                                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                            <stops>
+                                                <Stop>
+                                                    <color>
+                                                        <Color red="0.19736842811107635" green="0.028326023370027542" blue="0.028326023370027542" />
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="0.5101351351351351">
+                                                    <color>
+                                                        <Color red="0.7236841917037964" green="0.13401558995246887" blue="0.13401558995246887" />
+                                                    </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                    <color>
+                                                        <Color red="0.5" green="0.08796296268701553" blue="0.08796296268701553" />
+                                                    </color>
+                                                </Stop>
+                                            </stops>
+                                        </RadialGradient>
+                                    </textFill>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                           <stylesheets>
+                              <URL value="@style.css" />
+                              <URL value="@designImport.css" />
+                           </stylesheets>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Label layoutX="7.0" styleClass="shadow" stylesheets="@style.css" text="Thẻ thanh toán">
+                    <font>
+                        <Font name="Times New Roman Bold Italic" size="13.0" />
+                    </font></Label>
+                <TableView fx:id="tableProductSells" layoutY="15.0" onMouseClicked="#editNumber" prefHeight="129.0" prefWidth="368.0" styleClass="shadow" stylesheets="@style.css" AnchorPane.bottomAnchor="10.0">
+                    <columns>
+                        <TableColumn fx:id="col_name_Sells" prefWidth="131.0" text="Tên" />
+                        <TableColumn fx:id="col_id_Sells" prefWidth="65.0" text="Mã" />
+                        <TableColumn fx:id="col_amount_Sells" onEditCommit="#editNumber" prefWidth="65.0" text="Số lượng" />
+                        <TableColumn fx:id="col_coin_Sells" prefWidth="106.0" text="Thành tiền" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </bottom>
+    <right>
+        <TableView fx:id="tableShowProductSells" onKeyReleased="#createProSells" onMouseClicked="#createProSells" prefHeight="285.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="col_name_show" prefWidth="94.0" text="Tên" />
+                <TableColumn fx:id="col_id_show" minWidth="9.0" prefWidth="61.0" text="Mã" />
+                <TableColumn fx:id="col_function_show" minWidth="5.0" prefWidth="89.0" text="Chức năng" />
+                <TableColumn fx:id="col_priceSell_show" prefWidth="85.0" text="Giá Thành" />
+            </columns>
+            <styleClass>
+                <String fx:value="shadow" />
+                <String fx:value="border_pro" />
+            </styleClass>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </TableView>
+    </right>
+</BorderPane>

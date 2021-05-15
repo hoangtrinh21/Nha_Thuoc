@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="523.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ShowProduct">
+   <children>
+      <BorderPane layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="523.0" prefWidth="278.0" style="-fx-background-color: #D3D3D3;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="54.0" prefWidth="278.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="42.0" prefWidth="149.0" style="-fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 0.0, 10.0);" text="Sản phẩm" textFill="#616060">
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="30.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#backHome" stylesheets="@designImport.css">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/arrow_left_red.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="click-button" />
+                              <String fx:value="back" />
+                           </styleClass>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#updateScoll" stylesheets="@designImport.css">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/Reload-icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="back" />
+                              <String fx:value="click-button" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="37.0" prefWidth="238.0" style="-fx-background-color: #ffffff; -fx-background-radius: 100; -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 0.0, 10.0);">
+                     <opaqueInsets>
+                        <Insets left="20.0" right="20.0" />
+                     </opaqueInsets>
+                     <children>
+                        <TextField fx:id="textSearch" alignment="CENTER" onKeyReleased="#ActionSearch" prefHeight="39.0" prefWidth="146.0" promptText="Tìm kiếm" style="-fx-background-color: rgba(0,0,0,0);">
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="13.0" />
+                           </font></TextField>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Pane prefHeight="16.0" prefWidth="278.0" />
+                  <VBox fx:id="chooseItem" alignment="CENTER" prefHeight="406.0" prefWidth="238.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30; -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 0.0, 10.0);">
+                     <opaqueInsets>
+                        <Insets left="50.0" right="50.0" />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="343.0">
+                           <children>
+                              <Label fx:id="idItem" prefHeight="46.0" prefWidth="59.0" text="Vitamin">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextArea fx:id="nameItem" editable="false" prefHeight="40.0" prefWidth="133.0" styleClass="back" stylesheets="@designImport.css">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="13.0" />
+                                 </font></TextArea>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="imageItem" fitHeight="241.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                           <image>
+                              <Image url="@../image/vitaminA.jpg" />
+                           </image>
+                        </ImageView>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="303.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="135.0" text="Số lượng :" textFill="#756a6a">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="amountItem" prefHeight="29.0" prefWidth="91.0" text="30">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="50.0">
+                           <children>
+                              <Label prefHeight="38.0" prefWidth="65.0" text="Giá bán" textFill="#2b6832">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="priceSellItem" prefHeight="38.0" prefWidth="75.0" text="2000000">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="209.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="38.0" prefWidth="69.0" text="Giá nhập" textFill="#862929">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="priceImportItem" prefHeight="38.0" prefWidth="69.0" text="10">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="303.0">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="29.0" prefWidth="83.0" text="Chức năng :" textFill="#4d4646">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="functionItem" editable="false" prefHeight="40.0" prefWidth="121.0" styleClass="back" stylesheets="@designImport.css" text="Chức năng">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="14.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="223.0">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="68.0" text="HSD :" textFill="#4d3c3c">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="expiryDateItem" prefHeight="22.0" prefWidth="145.0" text="2020-12-12">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="15.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding></Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="343.0">
+                           <children>
+                              <Label prefHeight="43.0" prefWidth="88.0" text="Chú ý :" textFill="#4a3c3c">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="noteItem" editable="false" prefHeight="26.0" prefWidth="158.0" styleClass="back" stylesheets="@designImport.css" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="-5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="57.0" prefWidth="472.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="472.0">
+                     <children>
+                        <Button fx:id="edit" mnemonicParsing="false" onAction="#editProduct" prefHeight="41.0" prefWidth="209.0" style="-fx-background-color: #D3D3D3; -fx-background-radius: 20; -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.08), 10.0, 0.0, 5.0, 10.0);" styleClass="click-button" stylesheets="@designImport.css" text="Chỉnh sửa sản phẩm" textFill="#655252">
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="20.0" />
+                           </font></Button>
+                        <Button fx:id="Delete" mnemonicParsing="false" onAction="#ActionDelete" prefHeight="43.0" prefWidth="154.0" style="-fx-background-color: #d3d3d3; -fx-background-radius: 20; -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.08), 10.0, 0.0, 5.0, 10.0);" styleClass="click-button" stylesheets="@designImport.css" text="Xóa sản phẩm" textFill="#655252">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="20.0" />
+                           </font></Button>
+                     </children></HBox>
+                  <HBox alignment="CENTER" prefHeight="420.0" prefWidth="472.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fx:id="scroll" prefHeight="396.0" prefWidth="472.0" style="-fx-background-color: rgba(0,0,0,0);">
+                           <content>
+                              <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </ScrollPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="12.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
