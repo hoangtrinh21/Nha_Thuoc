@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="528.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.History">
+   <children>
+      <BorderPane layoutY="-7.0" prefHeight="557.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox prefHeight="80.0" prefWidth="694.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="93.0" prefWidth="694.0" style="-fx-background-color: #D3D3D3;">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="80.0" prefWidth="134.0">
+                           <children>
+                              <Text fill="#7c7070" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 0.0, 10.0);" text="Lịch sử" wrappingWidth="142.234375">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="31.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Pane prefHeight="80.0" prefWidth="44.0" />
+                        <DatePicker fx:id="calendar" onAction="#searchCalendar" prefHeight="36.0" prefWidth="257.0" promptText="mm/dd/yyyy" style="-fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 0.0, 10.0); -fx-background-color: #43494d;">
+                           <HBox.margin>
+                              <Insets top="-5.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                        <Button mnemonicParsing="false" onAction="#backHome" stylesheets="@designImport.css">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/arrow_left_red.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="150.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="click-button" />
+                              <String fx:value="shadow" />
+                              <String fx:value="back" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </top>
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="448.0" prefWidth="169.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#searchHistory" prefHeight="42.0" prefWidth="161.0" style="-fx-background-color: #D3D3D3; -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 5.0, 7.0);" styleClass="click-button" stylesheets="@designImport.css" text="Lịch sử" textFill="#06a0ff">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="40.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets right="46.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="historySell" mnemonicParsing="false" onAction="#searchHistorySell" prefHeight="42.0" prefWidth="161.0" style="-fx-background-color: #D3d3d3; -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 5.0, 7.0);" styleClass="click-button" stylesheets="@designImport.css" text="Lịch sử bán" textFill="#1e9736">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets right="13.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="historyImport" mnemonicParsing="false" onAction="#searchHistoryImport" prefHeight="42.0" prefWidth="161.0" style="-fx-background-color: #d3d3d3; -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 5.0, 7.0);" styleClass="click-button" stylesheets="@designImport.css" text="Lịch sử nhập" textFill="RED">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" right="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#searchHistoryCancel" prefHeight="42.0" prefWidth="161.0" style="-fx-background-color: #d3d3d3; -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 5.0, 7.0);" styleClass="click-button" stylesheets="@designImport.css" text="Lịch sử hủy" textFill="#343536">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets right="12.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="161.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);" text="Ghi chú :">
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#13ab55" height="15.0" stroke="BLACK" strokeType="INSIDE" width="15.0">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Rectangle>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);" text="SP bán">
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="25.0" prefWidth="161.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="15.0" stroke="BLACK" strokeType="INSIDE" width="15.0">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Rectangle>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);" text="SP nhập">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets left="65.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="38.0" prefWidth="161.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7e8990" height="15.0" stroke="BLACK" strokeType="INSIDE" width="15.0">
+                           <HBox.margin>
+                              <Insets left="75.0" />
+                           </HBox.margin>
+                        </Rectangle>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);" text="SP hủy">
+                           <font>
+                              <Font name="Times New Roman Bold Italic" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="448.0" prefWidth="546.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="519.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);" text="Hình ảnh" wrappingWidth="57.49609375">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);" text="Mã">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);" text="Tên" wrappingWidth="108.31999969482422">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);" text="Số lượng" wrappingWidth="44.9658203125">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="40.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);" text="Trạng thái" wrappingWidth="46.13599395751953">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);" text="Ngày">
+                                 <font>
+                                    <Font name="Times New Roman Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="25.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets top="15.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets right="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <ScrollPane fx:id="scroll" prefHeight="383.0" prefWidth="517.0">
+                           <content>
+                              <GridPane fx:id="grid" prefHeight="0.0" prefWidth="0.0">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

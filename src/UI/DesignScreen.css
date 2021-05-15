@@ -1,0 +1,24 @@
+.click-button{
+    -fx-background-color:#C0C0C0;
+    -fx-background-radius: 100;
+}
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+}
+.click-button:hover{
+    -fx-background-color: #2196f3;
+    -fx-background-radius: 100;
+    -fx-text-fill: white;
+    -fx-border-color: #2196f3;
+    -fx-border-radius: 100;
+    -fx-border-vidth:3;
+}
+.click-button:pressed{
+    -fx-background-color: #2196f3;
+    -fx-background-radius: 100;
+    -fx-text-fill: white;
+    -fx-border-color: #2196f3;
+    -fx-border-radius: 100;
+    -fx-border-vidth:3;
+    -fx-rotate: 10;
+}

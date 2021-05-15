@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="136.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Delete">
+    <children>
+        <Text layoutX="13.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Xóa sản phẩm đã chọn">
+            <font>
+                <Font name="Cambria Italic" size="16.0" />
+            </font>
+        </Text>
+        <Text fill="#403a3a" layoutX="13.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bạn có chắc chắn muốn xóa sản phẩm này từ danh sách của bạn ?">
+            <font>
+                <Font name="Cambria" size="13.0" />
+            </font>
+        </Text>
+        <Button layoutX="327.0" layoutY="84.0" mnemonicParsing="false" onAction="#ActionRemove" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #3080EA; -fx-background-radius: 7; -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.15), 10.0, 0.0, 5.0, 10.0);" text="Xóa" textFill="WHITE">
+            <font>
+                <Font name="Cambria Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button layoutX="247.0" layoutY="85.0" mnemonicParsing="false" onAction="#ActionCancel" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #ffffff; -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 10.0, 0.0, 5.0, 10.0);" styleClass="border" text="Hủy" textFill="#3080ea">
+            <font>
+                <Font name="Cambria Bold" size="14.0" />
+            </font>
+         <stylesheets>
+            <URL value="@style.css" />
+            <URL value="@designImport.css" />
+         </stylesheets>
+        </Button>
+        <Text fx:id="ID" layoutX="54.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" visible="false" />
+        <Text fx:id="amount" layoutX="96.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="amount" visible="false" />
+        <Text fx:id="priceImport" layoutX="156.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="priceImport" visible="false" />
+    </children>
+</AnchorPane>

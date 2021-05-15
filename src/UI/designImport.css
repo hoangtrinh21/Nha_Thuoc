@@ -1,0 +1,50 @@
+
+.back {
+    -fx-background-color:  transparent;
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+}
+.pro:hover {
+    -fx-background-color: #2196f3;
+    -fx-background-radius: 10;
+    -fx-text-fill: black;
+    -fx-border-color: #2196f3;
+    -fx-border-radius: 10;
+    -fx-border-vidth:3;
+}
+.click-button:hover{
+    -fx-background-color: #2196f3;
+    -fx-background-radius: 100;
+    -fx-text-fill: black;
+    -fx-border-color: #2196f3;
+    -fx-border-radius: 100;
+    -fx-border-vidth:3;
+}
+.click-button:pressed{
+    -fx-background-color: #2196f3;
+    -fx-background-radius: 100;
+    -fx-text-fill: white;
+    -fx-border-color: #2196f3;
+    -fx-border-radius: 100;
+    -fx-border-vidth:3;
+    -fx-rotate: 10;
+}
+
+.sidebarItem:hover{
+    -fx-background-color: #146886;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+.table-view .column-header-background{
+
+    -fx-background-color: #97FFFF;
+    -fx-background-radius: 100;
+    -fx-background-insets: 0 0 10 0;
+}
+.table-view .column-header, .table-view .filler{
+    -fx-size:50px;
+    -fx-border-width: 0 10 10 0;
+    -fx-background-color: transparent;
+}
